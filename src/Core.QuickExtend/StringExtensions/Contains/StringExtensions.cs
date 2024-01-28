@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.StringExtensions.Contains;
+﻿namespace Core.QuickExtend.StringExtensions;
 
 public static partial class StringExtensions
 {

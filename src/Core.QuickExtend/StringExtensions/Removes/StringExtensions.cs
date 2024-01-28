@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Core.QuickExtend.StringExtensions.Removes;
+namespace Core.QuickExtend.StringExtensions;
 
 public static partial class StringExtensions
 {

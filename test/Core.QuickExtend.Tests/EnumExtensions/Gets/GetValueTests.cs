@@ -1,11 +1,4 @@
-﻿using Core.QuickExtend.EnumExtensions.Gets;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.QuickExtend.Tests.EnumExtensions.Gets;
+﻿namespace Core.QuickExtend.Tests.EnumExtensions.Gets;
 
 internal class GetValueTests
 {

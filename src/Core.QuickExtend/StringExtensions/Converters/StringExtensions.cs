@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Core.QuickExtend.StringExtensions.Converters;
+namespace Core.QuickExtend.StringExtensions;
 
 public static partial class StringExtensions
 {

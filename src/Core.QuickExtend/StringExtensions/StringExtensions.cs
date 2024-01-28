@@ -2,7 +2,7 @@
 
 namespace Core.QuickExtend.StringExtensions;
 
-public static class StringExtensions
+public static partial class StringExtensions
 {
     /// <summary>
     /// Capitalizes the first letter of each word in a string.

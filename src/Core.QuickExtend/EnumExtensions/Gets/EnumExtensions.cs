@@ -1,8 +1,6 @@
-﻿using Core.QuickExtend.Enums;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core.QuickExtend.EnumExtensions.Gets;
+namespace Core.QuickExtend.EnumExtensions;
 
 public static partial class EnumExtensions
 {
