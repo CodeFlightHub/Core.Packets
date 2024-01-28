@@ -49,4 +49,23 @@ public static class StringExtensions
 
         return sum;
     }
+
+    /// <summary>
+    /// Searches for a specified string value within an Enum and returns the first matching Enum item.
+    /// </summary>
+    /// <typeparam name="T">Enum type.</typeparam>
+    /// <param name="value">Searched string value.</param>
+    /// <returns>Found Enum item or the default Enum item.</returns>
+    public static T? ParseFromString<T>(this string value) where T : Enum
+    {
+        try
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
+        }
+        catch (ArgumentException)
+        {
+            return default(T);
+
+        }
+    }
 }
