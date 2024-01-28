@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Tests.StringExtensions;
+﻿namespace Core.QuickExtend.Tests.StringExtensions.Converters;
 
 internal class ToTurkishLowerCaseTests
 {

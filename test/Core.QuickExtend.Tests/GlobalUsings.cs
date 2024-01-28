@@ -1,2 +1,9 @@
-global using Core.QuickExtend.Extensions;
+global using Core.QuickExtend.StringExtensions;
+global using Core.QuickExtend.StringExtensions.Adds;
+global using Core.QuickExtend.StringExtensions.Checks;
+global using Core.QuickExtend.StringExtensions.Contains;
+global using Core.QuickExtend.StringExtensions.Converters;
+global using Core.QuickExtend.StringExtensions.Finds;
+global using Core.QuickExtend.StringExtensions.Formats;
+global using Core.QuickExtend.StringExtensions.Removes;
 global using NUnit.Framework;
