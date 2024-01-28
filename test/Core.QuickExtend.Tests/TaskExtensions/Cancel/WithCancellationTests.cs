@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.QuickExtend.Tests.TaskExtensions.Cancel;
+﻿namespace Core.QuickExtend.Tests.TaskExtensions.Cancel;
 
 internal class WithCancellationTests
 {

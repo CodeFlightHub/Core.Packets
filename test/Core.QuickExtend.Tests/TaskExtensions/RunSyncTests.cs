@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.QuickExtend.Tests.TaskExtensions;
+﻿namespace Core.QuickExtend.Tests.TaskExtensions;
 
 internal class RunSyncTests
 {
@@ -14,7 +8,6 @@ internal class RunSyncTests
         // Arrange
         var expectedResult = 42;
 
-        // Mock asenkron bir fonksiyon
         var asyncFunctionMock = new Mock<Func<Task<int>>>();
         asyncFunctionMock.Setup(f => f()).ReturnsAsync(expectedResult);
 
