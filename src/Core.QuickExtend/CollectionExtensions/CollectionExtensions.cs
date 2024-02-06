@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Extensions;
+﻿namespace Core.QuickExtend.CollectionExtensions;
 
 public static class CollectionExtensions
 {

@@ -22,4 +22,10 @@
     <ProjectReference Include="..\..\src\Core.QuickExtend\Core.QuickExtend.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DateTimeExtensions\Checks\" />
+    <Folder Include="DateTimeExtensions\Converters\" />
+    <Folder Include="DateTimeExtensions\Gets\" />
+  </ItemGroup>
+
 </Project>
