@@ -1,4 +1,4 @@
-namespace Core.QuickExtend.Tests.StringExtensions;
+namespace Core.QuickExtend.Tests.StringExtensions.Others;
 
 public class SumDigitsTests
 {

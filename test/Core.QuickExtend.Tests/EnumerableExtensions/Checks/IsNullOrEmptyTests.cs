@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Tests.EnumerableExtensions;
+﻿namespace Core.QuickExtend.Tests.EnumerableExtensions.Checks;
 
 internal class IsNullOrEmptyTests
 {

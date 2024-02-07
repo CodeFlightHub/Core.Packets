@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Tests.TaskExtensions;
+﻿namespace Core.QuickExtend.Tests.TaskExtensions.Others;
 
 internal class RunSyncTests
 {

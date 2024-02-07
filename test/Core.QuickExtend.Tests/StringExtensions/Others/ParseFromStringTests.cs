@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Tests.StringExtensions;
+﻿namespace Core.QuickExtend.Tests.StringExtensions.Others;
 
 internal class ParseFromStringTests
 {
