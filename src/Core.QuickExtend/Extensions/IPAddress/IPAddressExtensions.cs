@@ -1,28 +1,88 @@
-﻿namespace Core.QuickExtend.Extensions;
+﻿using System.Net;
+using System.Net.Sockets;
 
-public static partial class IPAddressExtensions {
+namespace Core.QuickExtend.Extensions;
+/// <summary>
+/// Extension methods related to IP addresses.
+/// </summary>
+public static partial class IPAddressExtensions
+{
 
-        public static bool IsIPv4Address(this IPAddress ipAddress)
+    /// <summary>
+    /// Performs a reverse DNS lookup for the given IP address and returns the corresponding domain name, or null if not available.
+    /// </summary>
+    /// <param name="ipAddress">The IP address to perform the reverse DNS lookup.</param>
+    /// <returns>The domain name corresponding to the IP address, or null if not available.</returns>
+    public static string ReverseDNSLookup(this IPAddress ipAddress)
+    {
+        try
         {
-            return ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork;
+            IPHostEntry hostEntry = Dns.GetHostEntry(ipAddress);
+            return hostEntry.HostName;
         }
-
-        public static bool IsIPv4Address(this string input)
+        catch (SocketException)
         {
-            IPAddress ipAddress;
-            return IPAddress.TryParse(input, out ipAddress) && ipAddress.IsIPv4Address();
+            return null; // DNS lookup failed
         }
+    }
 
-        public static bool IsIPv6Address(this IPAddress ipAddress)
+    
+    /// <summary>
+    /// Reverses the IP address (e.g., "192.168.1.1" => "1.1.168.192").
+    /// </summary>
+    /// <param name="ipAddress">The IP address to reverse.</param>
+    /// <returns>The reversed IP address string.</returns>
+    public static string ReverseIPAddress(this IPAddress ipAddress)
+    {
+        if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         {
-            return ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6;
+            byte[] bytes = ipAddress.GetAddressBytes();
+            Array.Reverse(bytes);
+            return new IPAddress(bytes).ToString();
         }
+        throw new ArgumentException("IPv4 address expected.");
+    }
 
-        public static bool IsIPv6Address(this string input)
+
+    /// <summary>
+    /// Masks the IP address based on the specified prefix length.
+    /// </summary>
+    /// <param name="ipAddress">The IP address to mask.</param>
+    /// <param name="prefixLength">The prefix length for masking.</param>
+    /// <returns>The masked IP address.</returns>
+    /// <exception cref="ArgumentException">Thrown when an IPv4 address is expected.</exception>
+    public static IPAddress ApplyPrefixMask(this IPAddress ipAddress, int prefixLength)
+    {
+        if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         {
-            IPAddress ipAddress;
-            return IPAddress.TryParse(input, out ipAddress) && ipAddress.IsIPv6Address();
+            byte[] ipBytes = ipAddress.GetAddressBytes();
+            byte[] maskBytes = new byte[ipBytes.Length];
+
+            for (int i = 0; i < ipBytes.Length; i++)
+            {
+                if (prefixLength >= 8)
+                {
+                    maskBytes[i] = 0xFF;
+                    prefixLength -= 8;
+                }
+                else if (prefixLength > 0)
+                {
+                    maskBytes[i] = (byte)(0xFF << (8 - prefixLength));
+                    prefixLength = 0;
+                }
+                else
+                {
+                    maskBytes[i] = 0x00;
+                }
+            }
+
+            return new IPAddress(ipBytes.Zip(maskBytes, (b1, b2) => (byte)(b1 & b2)).ToArray());
         }
+        throw new ArgumentException("IPv4 address expected.");
+    }
+
+}
 
 
- }
+
+

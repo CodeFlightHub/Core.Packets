@@ -22,4 +22,8 @@
     <ProjectReference Include="..\..\src\Core.QuickExtend\Core.QuickExtend.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="IPAddressExtensions\Subnet\" />
+  </ItemGroup>
+
 </Project>
