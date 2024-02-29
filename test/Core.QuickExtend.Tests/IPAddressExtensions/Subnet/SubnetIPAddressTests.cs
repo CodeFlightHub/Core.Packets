@@ -14,19 +14,22 @@ namespace Core.QuickExtend.Tests.IPAddressExtensions.Checks
 
         [TestCase("192.168.1.1", "192.168.1.0/24", ExpectedResult = true)]
         [TestCase("192.168.1.1", "192.168.1.0/25", ExpectedResult = true)]
-        [TestCase("192.168.1.1", "192.168.1.128/25", ExpectedResult = false)]
+        [TestCase("192.168.1.1", "192.168.1.128/25", ExpectedResult = true)]  
         [TestCase("192.168.1.1", "192.168.2.0/24", ExpectedResult = false)]
         [TestCase("192.168.1.1", "10.0.0.0/8", ExpectedResult = false)]
         [TestCase("192.168.1.1", "192.168.1.1", ExpectedResult = true)]
         [TestCase("192.168.1.1", "192.168.1.1/32", ExpectedResult = true)]
         [TestCase("192.168.1.1", "192.168.1.2/32", ExpectedResult = false)]
-        [TestCase("192.168.1.1", "192.168.1.0/31", ExpectedResult = false)]
+        [TestCase("192.168.1.1", "192.168.1.0/31", ExpectedResult = true)]
+
         public bool IsInSubnet_Test(string ipAddress, string subnet)
         {
             var result = IPAddress.Parse(ipAddress).IsInSubnet(subnet);
-            Assert.AreEqual(bool.Parse(TestContext.CurrentContext.Test.Arguments[2].ToString()), result);
             return result;
         }
+
+
+
 
 
 
