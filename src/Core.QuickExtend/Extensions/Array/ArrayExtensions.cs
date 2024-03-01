@@ -5,29 +5,6 @@ public static partial class ArrayExtensions
     private static Random rng = new Random();
 
     /// <summary>
-    /// Determines whether the specified array contains the specified element.
-    /// </summary>
-    /// <typeparam name="T">The type of elements in the array.</typeparam>
-    /// <param name="array">The array to check.</param>
-    /// <param name="element">The element to locate in the array.</param>
-    /// <returns>true if the array contains the specified element; otherwise, false.</returns>
-    public static bool ContainsElement<T>(this T[] array, T element)
-    {
-        if (array.IsNullOrEmpty())
-            throw new ArgumentNullException(nameof(array));
-
-        foreach (T item in array)
-        {
-            if (item != null && item.Equals(element))
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
-    /// <summary>
     /// Randomly shuffles the elements of the specified array.
     /// </summary>
     /// <typeparam name="T">The type of elements in the array.</typeparam>
@@ -47,22 +24,6 @@ public static partial class ArrayExtensions
             array[k] = array[n];
             array[n] = value;
         }
-    }
-
-
-    /// <summary>
-    /// Concatenates the elements of the specified array, using the specified separator between each element.
-    /// </summary>
-    /// <typeparam name="T">The type of elements in the array.</typeparam>
-    /// <param name="array">The array that contains the elements to concatenate.</param>
-    /// <param name="separator">The string to use as a separator.</param>
-    /// <returns>A string that consists of the elements of the array concatenated together using the specified separator.</returns>
-    public static string JoinElements<T>(this T[] array, string separator)
-    {
-        if (array.IsNullOrEmpty())
-            throw new ArgumentNullException(nameof(array));
-
-        return string.Join(separator, array);
     }
 
 
@@ -170,31 +131,6 @@ public static partial class ArrayExtensions
         var falseGroup = partitioned.FirstOrDefault(g => !g.Key);
 
         return new Tuple<T[], T[]>(trueGroup?.ToArray() ?? new T[0], falseGroup?.ToArray() ?? new T[0]);
-    }
-
-
-    /// <summary>
-    /// Performs the specified action on each element of the array.
-    /// </summary>
-    /// <typeparam name="T">The type of elements in the array.</typeparam>
-    /// <param name="array">The array to iterate over.</param>
-    /// <param name="action">The action to perform on each element of the array. If not specified, a default action that writes the element to the console will be used.</param>
-    public static void ForEach<T>(this T[] array, Action<T> action = null)
-    {
-        if (array.IsNullOrEmpty())
-            throw new ArgumentNullException(nameof(array));
-
-        action ??= DefaultAction;
-
-        foreach (var item in array)
-        {
-            action(item);
-        }
-    }
-
-    private static void DefaultAction<T>(T item)
-    {
-        Console.WriteLine(item);
     }
 
 

@@ -18,7 +18,6 @@ public static partial class ArrayExtensions
                     .ToArray();
     }
 
-
     /// <summary>
     /// Flattens a two-dimensional array into a one-dimensional array.
     /// </summary>
@@ -33,5 +32,4 @@ public static partial class ArrayExtensions
         List<T> result = [.. array];
         return result.ToArray();
     }
-
 }

@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2815AEA7-110
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BC7412DA-4FBF-40B7-88BB-72944D2BDE25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.QuickExtend", "src\Core.QuickExtend\Core.QuickExtend.csproj", "{8DCA6243-1D9E-4F3A-9432-A5185600CF9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.QuickExtend", "src\Core.QuickExtend\Core.QuickExtend.csproj", "{8DCA6243-1D9E-4F3A-9432-A5185600CF9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.QuickExtend.Tests", "test\Core.QuickExtend.Tests\Core.QuickExtend.Tests.csproj", "{3970063B-D0CC-4F88-9DA5-1D663CF3BAE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.QuickExtend.Tests", "test\Core.QuickExtend.Tests\Core.QuickExtend.Tests.csproj", "{3970063B-D0CC-4F88-9DA5-1D663CF3BAE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
