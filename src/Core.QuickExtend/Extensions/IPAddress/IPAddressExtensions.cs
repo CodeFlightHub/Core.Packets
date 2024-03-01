@@ -2,12 +2,12 @@
 using System.Net.Sockets;
 
 namespace Core.QuickExtend.Extensions;
+
 /// <summary>
 /// Extension methods related to IP addresses.
 /// </summary>
 public static partial class IPAddressExtensions
 {
-
     /// <summary>
     /// Performs a reverse DNS lookup for the given IP address and returns the corresponding domain name, or null if not available.
     /// </summary>
@@ -26,7 +26,7 @@ public static partial class IPAddressExtensions
         }
     }
 
-    
+
     /// <summary>
     /// Reverses the IP address (e.g., "192.168.1.1" => "1.1.168.192").
     /// </summary>

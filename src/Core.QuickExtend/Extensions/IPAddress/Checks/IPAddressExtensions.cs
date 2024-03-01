@@ -4,7 +4,6 @@ namespace Core.QuickExtend.Extensions;
 
 public static partial class IPAddressExtensions
 {
-
     /// <summary>
     /// Checks if the given string represents a valid IP address (either IPv4 or IPv6).
     /// </summary>

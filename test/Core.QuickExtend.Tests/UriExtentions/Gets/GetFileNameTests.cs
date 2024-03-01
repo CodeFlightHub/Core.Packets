@@ -1,47 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Core.QuickExtend.Tests.UriExtentions.Gets;
 
-namespace Core.QuickExtend.Tests.UriExtentions.Gets
+internal class GetFileNameTests
 {
-    internal class GetFileNameTests
+    [Test]
+    public void GetFileName_WithFileName_ReturnsFileName()
     {
-        [Test]
-        public void GetFileName_WithFileName_ReturnsFileName()
-        {
-            // Arrange
-            var uri = new Uri("http://example.com/api/resource/sample.txt");
+        // Arrange
+        var uri = new Uri("http://example.com/api/resource/sample.txt");
 
-            // Act
-            var fileName = uri.GetFileName();
+        // Act
+        var fileName = uri.GetFileName();
 
-            // Assert
-            Assert.AreEqual("sample.txt", fileName);
-        }
+        // Assert
+        Assert.AreEqual("sample.txt", fileName);
+    }
 
-        [Test]
-        public void GetFileName_WithoutFileName_ReturnsEmptyString()
-        {
-            // Arrange
-            var uri = new Uri("http://example.com/api/resource/");
+    [Test]
+    public void GetFileName_WithoutFileName_ReturnsEmptyString()
+    {
+        // Arrange
+        var uri = new Uri("http://example.com/api/resource/");
 
-            // Act
-            var fileName = uri.GetFileName();
+        // Act
+        var fileName = uri.GetFileName();
 
-            // Assert
-            Assert.AreEqual(string.Empty, fileName);
-        }
+        // Assert
+        Assert.AreEqual(string.Empty, fileName);
+    }
 
-        [Test]
-        public void GetFileName_NullUri_ThrowsArgumentNullException()
-        {
-            // Arrange
-            Uri uri = null;
+    [Test]
+    public void GetFileName_NullUri_ThrowsArgumentNullException()
+    {
+        // Arrange
+        Uri uri = null;
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => uri.GetFileName());
-        }
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => uri.GetFileName());
     }
 }

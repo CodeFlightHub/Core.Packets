@@ -1,10 +1,9 @@
-﻿using System.Text.Json;
-using System.Web;
+﻿using System.Web;
 
 namespace Core.QuickExtend.Extensions;
 
-public static partial class UriExtensions {
-
+public static partial class UriExtensions
+{
     /// <summary>
     /// Parses the query parameters from the URI and returns them as a dictionary.
     /// </summary>

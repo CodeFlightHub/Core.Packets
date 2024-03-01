@@ -3,7 +3,8 @@ using System.Web;
 
 namespace Core.QuickExtend.Extensions;
 
-public static partial class UriExtensions {
+public static partial class UriExtensions
+{
 
     /// <summary>
     /// Gets the file extension from the URI's absolute path.

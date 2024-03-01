@@ -2,7 +2,6 @@
 
 public static partial class ArrayExtensions
 {
-
     /// <summary>
     /// Filters the elements of an array based on a specified predicate function and returns a new array containing the filtered elements in reverse order.
     /// </summary>
@@ -66,5 +65,5 @@ public static partial class ArrayExtensions
 
         return filteredArray;
     }
- 
+
 }

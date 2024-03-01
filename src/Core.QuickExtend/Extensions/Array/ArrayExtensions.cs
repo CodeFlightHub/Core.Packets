@@ -2,7 +2,6 @@
 
 public static partial class ArrayExtensions
 {
-
     private static Random rng = new Random();
 
     /// <summary>
@@ -296,5 +295,5 @@ public static partial class ArrayExtensions
         return true;
     }
 
- 
+
 }

@@ -1,5 +1,4 @@
 ﻿using System.Net;
- 
 
 namespace Core.QuickExtend.Extensions;
 

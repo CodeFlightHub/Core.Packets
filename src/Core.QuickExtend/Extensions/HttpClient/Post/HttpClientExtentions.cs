@@ -4,6 +4,7 @@ using System.Text;
 using System.Xml.Serialization;
 
 namespace Core.QuickExtend;
+
 public static partial class HttpClientExtensions
 {
     /// <summary>
@@ -21,7 +22,6 @@ public static partial class HttpClientExtensions
     {
         return await PostJsonAsync<TResponse, TRequest>(httpClient, new Uri(requestUri), requestData, cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a POST request with JSON content asynchronously and deserializes the response to the specified type.
@@ -66,7 +66,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a POST request with XML content asynchronously and returns the HttpResponseMessage.
     /// </summary>
@@ -81,7 +80,6 @@ public static partial class HttpClientExtensions
     {
         return await PostAsXmlAsync<T>(client, new Uri(requestUri), data, cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a POST request with XML content asynchronously and returns the HttpResponseMessage.
@@ -139,7 +137,6 @@ public static partial class HttpClientExtensions
         return await PostAsFormDataAsync(client, new Uri(requestUri), formData, cancellationToken).ConfigureAwait(false);
     }
 
-
     /// <summary>
     /// Sends a POST request with form data asynchronously and returns the HttpResponseMessage.
     /// </summary>
@@ -176,7 +173,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a POST request with stream content asynchronously and returns the HttpResponseMessage.
     /// </summary>
@@ -190,7 +186,6 @@ public static partial class HttpClientExtensions
     {
         return await PostAsStreamAsync(client, new Uri(requestUri), stream, cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a POST request with stream content asynchronously and returns the HttpResponseMessage.
@@ -224,7 +219,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a POST request with byte array content asynchronously and returns the HttpResponseMessage.
     /// </summary>
@@ -239,7 +233,6 @@ public static partial class HttpClientExtensions
     {
         return await PostByteArrayAsync(client, new Uri(requestUri), content, mediaType, cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a POST request with byte array content asynchronously and returns the HttpResponseMessage.
@@ -275,7 +268,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a POST request with a file asynchronously and returns the HttpResponseMessage.
     /// </summary>
@@ -291,7 +283,6 @@ public static partial class HttpClientExtensions
     {
         return await PostFileAsync(client, new Uri(requestUri), fileBytes, fileName, mediaType, cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a POST request with a file asynchronously and returns the HttpResponseMessage.
@@ -324,8 +315,4 @@ public static partial class HttpClientExtensions
             throw new HttpRequestException($"Failed to post file: {ex.Message}", ex);
         }
     }
-
-
 }
-
-

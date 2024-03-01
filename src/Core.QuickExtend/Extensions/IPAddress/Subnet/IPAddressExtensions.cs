@@ -1,9 +1,7 @@
-﻿
-using Core.QuickExtend.Enums;
-using System.Net;
-using System.Net.Sockets;
+﻿using System.Net;
 
 namespace Core.QuickExtend.Extensions;
+
 public static partial class IPAddressExtensions
 {
     /// <summary>

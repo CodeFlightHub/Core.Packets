@@ -1,9 +1,9 @@
 ﻿using System.Net.Http.Json;
 
 namespace Core.QuickExtend;
+
 public static partial class HttpClientExtensions
 {
-
     /// <summary>
     /// Sends a DELETE request asynchronously and deserializes the response to the specified type.
     /// </summary>
@@ -96,7 +96,7 @@ public static partial class HttpClientExtensions
         {
             using var httpResponse = await httpClient.DeleteAsync(requestUri, cancellationToken).ConfigureAwait(false);
             httpResponse.EnsureSuccessStatusCode();
-            return true; 
+            return true;
         }
         catch (HttpRequestException ex)
         {

@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 
 namespace Core.QuickExtend;
+
 public static partial class HttpClientExtensions
 {
     /// <summary>

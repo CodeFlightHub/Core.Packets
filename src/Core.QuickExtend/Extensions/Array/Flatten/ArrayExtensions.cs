@@ -2,7 +2,6 @@
 
 public static partial class ArrayExtensions
 {
-
     /// <summary>
     /// Flattens a jagged array (array of arrays) into a one-dimensional array.
     /// </summary>

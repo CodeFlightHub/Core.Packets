@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 
 
 namespace Core.QuickExtend;
+
 public static partial class HttpClientExtensions
 {
     /// <summary>

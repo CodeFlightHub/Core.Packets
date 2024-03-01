@@ -1,47 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Core.QuickExtend.Tests.UriExtentions.Checks;
 
-namespace Core.QuickExtend.Tests.UriExtentions.Checks
+internal class IsSecureTests
 {
-    internal class IsSecureTests
+    [Test]
+    public void IsSecure_WithHttpsScheme_ReturnsTrue()
     {
-        [Test]
-        public void IsSecure_WithHttpsScheme_ReturnsTrue()
-        {
-            // Arrange
-            var uri = new Uri("https://example.com");
+        // Arrange
+        var uri = new Uri("https://example.com");
 
-            // Act
-            var result = uri.IsSecure();
+        // Act
+        var result = uri.IsSecure();
 
-            // Assert
-            Assert.IsTrue(result);
-        }
+        // Assert
+        Assert.IsTrue(result);
+    }
 
-        [Test]
-        public void IsSecure_WithHttpScheme_ReturnsFalse()
-        {
-            // Arrange
-            var uri = new Uri("http://example.com");
+    [Test]
+    public void IsSecure_WithHttpScheme_ReturnsFalse()
+    {
+        // Arrange
+        var uri = new Uri("http://example.com");
 
-            // Act
-            var result = uri.IsSecure();
+        // Act
+        var result = uri.IsSecure();
 
-            // Assert
-            Assert.IsFalse(result);
-        }
+        // Assert
+        Assert.IsFalse(result);
+    }
 
-        [Test]
-        public void IsSecure_NullUri_ThrowsArgumentNullException()
-        {
-            // Arrange
-            Uri uri = null;
+    [Test]
+    public void IsSecure_NullUri_ThrowsArgumentNullException()
+    {
+        // Arrange
+        Uri uri = null;
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => uri.IsSecure());
-        }
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => uri.IsSecure());
     }
 }

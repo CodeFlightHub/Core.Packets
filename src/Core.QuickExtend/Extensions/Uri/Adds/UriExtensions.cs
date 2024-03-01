@@ -1,10 +1,9 @@
-﻿using System.Text.Json;
-using System.Web;
+﻿using System.Web;
 
 namespace Core.QuickExtend.Extensions;
 
-public static partial class UriExtensions {
-
+public static partial class UriExtensions
+{
     /// <summary>
     /// Appends the specified <paramref name="newPath"/> to the end of the URI path.
     /// </summary>
@@ -80,7 +79,7 @@ public static partial class UriExtensions {
 
         if (query.AllKeys.Contains(key))
             query[key] = value;
-        else  
+        else
             query.Add(key, value);
 
         uriBuilder.Query = query.ToString();

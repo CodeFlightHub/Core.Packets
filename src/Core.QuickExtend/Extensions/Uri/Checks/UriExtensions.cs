@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Web;
-
-namespace Core.QuickExtend.Extensions;
+﻿namespace Core.QuickExtend.Extensions;
 
 public static partial class UriExtensions
 {

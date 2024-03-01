@@ -1,47 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Core.QuickExtend.Tests.UriExtentions.Gets;
 
-namespace Core.QuickExtend.Tests.UriExtentions.Gets
+internal class GetFileExtensionTests
 {
-    internal class GetFileExtensionTests
+    [Test]
+    public void GetFileExtension_WithExtension_ReturnsExtension()
     {
-        [Test]
-        public void GetFileExtension_WithExtension_ReturnsExtension()
-        {
-            // Arrange
-            var uri = new Uri("http://example.com/api/resource/sample.txt");
+        // Arrange
+        var uri = new Uri("http://example.com/api/resource/sample.txt");
 
-            // Act
-            var fileExtension = uri.GetFileExtension();
+        // Act
+        var fileExtension = uri.GetFileExtension();
 
-            // Assert
-            Assert.AreEqual(".txt", fileExtension);
-        }
+        // Assert
+        Assert.AreEqual(".txt", fileExtension);
+    }
 
-        [Test]
-        public void GetFileExtension_WithoutExtension_ReturnsEmptyString()
-        {
-            // Arrange
-            var uri = new Uri("http://example.com/api/resource/sample");
+    [Test]
+    public void GetFileExtension_WithoutExtension_ReturnsEmptyString()
+    {
+        // Arrange
+        var uri = new Uri("http://example.com/api/resource/sample");
 
-            // Act
-            var fileExtension = uri.GetFileExtension();
+        // Act
+        var fileExtension = uri.GetFileExtension();
 
-            // Assert
-            Assert.AreEqual(string.Empty, fileExtension);
-        }
+        // Assert
+        Assert.AreEqual(string.Empty, fileExtension);
+    }
 
-        [Test]
-        public void GetFileExtension_NullUri_ThrowsArgumentNullException()
-        {
-            // Arrange
-            Uri uri = null;
+    [Test]
+    public void GetFileExtension_NullUri_ThrowsArgumentNullException()
+    {
+        // Arrange
+        Uri uri = null;
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => uri.GetFileExtension());
-        }
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => uri.GetFileExtension());
     }
 }
