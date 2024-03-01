@@ -65,5 +65,4 @@ public static partial class ArrayExtensions
 
         return filteredArray;
     }
-
 }
