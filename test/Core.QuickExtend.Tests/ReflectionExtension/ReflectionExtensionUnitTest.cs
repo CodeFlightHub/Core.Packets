@@ -4,7 +4,7 @@ namespace Core.QuickExtend.Tests.ReflectionExtension;
 
 internal class ReflectionExtensionUnitTest
 {
-  
+
 
     [Test]
     public void GetPropertyNames_ReturnsCorrectPropertyNames()

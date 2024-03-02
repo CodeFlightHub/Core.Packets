@@ -5,8 +5,11 @@ namespace Core.QuickExtend.Extensions;
 public static partial class ReflectionExtensions
 {
     /// <summary>
-    /// Bir nesnenin belirli bir özelliğinin değerini değiştiren extension metot.
+    /// Extension method that sets the value of a specified property for an object.
     /// </summary>
+    /// <param name="obj">The object whose property will be modified.</param>
+    /// <param name="propertyName">The name of the property to be modified.</param>
+    /// <param name="newValue">The new value to be set for the property.</param>
     public static void SetPropertyByName(this object obj, string propertyName, object newValue)
     {
         if (obj == null)
@@ -20,8 +23,10 @@ public static partial class ReflectionExtensions
     }
 
     /// <summary>
-    /// Bir nesnenin türündeki tüm property'lerine belirli bir değeri atayan extension metot.
+    /// Extension method that sets the values of all properties for an object to a specified value.
     /// </summary>
+    /// <param name="obj">The object whose properties will be modified.</param>
+    /// <param name="value">The new value to be set for all properties.</param>
     public static void SetAllPropertyValues(this object obj, object value)
     {
         if (obj == null)

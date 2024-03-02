@@ -1,10 +1,9 @@
-﻿namespace Core.QuickExtend.Enums
+﻿namespace Core.QuickExtend.Enums;
+
+public enum IpAddressType
 {
-    public enum IpAddressType
-    {
-        Unknown,
-        IPv4,
-        IPv6,
-        IPv4MappedToIPv6
-    }
+    Unknown,
+    IPv4,
+    IPv6,
+    IPv4MappedToIPv6
 }
