@@ -26,7 +26,6 @@ public static partial class IPAddressExtensions
         }
     }
 
-
     /// <summary>
     /// Reverses the IP address (e.g., "192.168.1.1" => "1.1.168.192").
     /// </summary>
@@ -42,7 +41,6 @@ public static partial class IPAddressExtensions
         }
         throw new ArgumentException("IPv4 address expected.");
     }
-
 
     /// <summary>
     /// Masks the IP address based on the specified prefix length.
@@ -80,9 +78,4 @@ public static partial class IPAddressExtensions
         }
         throw new ArgumentException("IPv4 address expected.");
     }
-
 }
-
-
-
-

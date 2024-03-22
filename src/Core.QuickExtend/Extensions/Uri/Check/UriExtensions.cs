@@ -16,7 +16,6 @@ public static partial class UriExtensions
         return uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps;
     }
 
-
     /// <summary>
     /// Determines whether the URI is secure, i.e., it uses the HTTPS scheme.
     /// </summary>
@@ -30,7 +29,6 @@ public static partial class UriExtensions
 
         return uri.Scheme.Equals(Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase);
     }
-
 
     /// <summary>
     /// Determines whether the URI has a specific query parameter.
@@ -56,7 +54,6 @@ public static partial class UriExtensions
         return queryParameters.Contains(parameterName);
     }
 
-
     /// <summary>
     /// Determines whether the URI represents a mailto URI.
     /// </summary>
@@ -71,7 +68,6 @@ public static partial class UriExtensions
         return uri.Scheme == Uri.UriSchemeMailto;
     }
 
-
     /// <summary>
     /// Determines whether the URI represents a tel URI.
     /// </summary>
@@ -85,7 +81,6 @@ public static partial class UriExtensions
 
         return uri.Scheme == "tel";
     }
-
 
     /// <summary>
     /// Determines whether the URI has the specified subdomain.
@@ -126,7 +121,6 @@ public static partial class UriExtensions
         return uri.AbsolutePath.Contains(path);
     }
 
-
     /// <summary>
     /// Determines whether the URI has the specified file name in its path.
     /// </summary>
@@ -153,7 +147,6 @@ public static partial class UriExtensions
         return false;
     }
 
-
     /// <summary>
     /// Determines whether the URI is a valid HTTP or HTTPS URL.
     /// </summary>
@@ -168,5 +161,4 @@ public static partial class UriExtensions
         return Uri.TryCreate(uri.AbsoluteUri, UriKind.Absolute, out _) &&
                (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps);
     }
-
 }

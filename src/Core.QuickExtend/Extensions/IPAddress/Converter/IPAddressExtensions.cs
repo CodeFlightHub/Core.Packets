@@ -4,7 +4,6 @@ namespace Core.QuickExtend.Extensions;
 
 public static partial class IPAddressExtensions
 {
-
     /// <summary>
     /// Converts the IP address to an IPEndPoint with the specified port number.
     /// </summary>
@@ -15,7 +14,6 @@ public static partial class IPAddressExtensions
     {
         return new IPEndPoint(ipAddress, port);
     }
-
 
     /// <summary>
     /// Converts the IP address to a URL string with the specified protocol (default is "http://").
@@ -28,7 +26,6 @@ public static partial class IPAddressExtensions
         return $"{protocol}{ipAddress}";
     }
 
-
     /// <summary>
     /// Converts the IP address to a hexadecimal string representation.
     /// </summary>
@@ -39,6 +36,4 @@ public static partial class IPAddressExtensions
         byte[] bytes = ipAddress.GetAddressBytes();
         return BitConverter.ToString(bytes).Replace("-", "");
     }
-
-
 }

@@ -19,7 +19,6 @@ public static partial class IPAddressExtensions
         return IPAddress.TryParse(ipAddress, out _);
     }
 
-
     /// <summary>
     /// Checks if the IP address is within a given range.
     /// </summary>
@@ -44,7 +43,6 @@ public static partial class IPAddressExtensions
         return true;
     }
 
-
     /// <summary>
     /// Checks if the given IP address is a Class A address.
     /// </summary>
@@ -55,7 +53,6 @@ public static partial class IPAddressExtensions
         // Class A addresses have the first octet value between 1 and 126.
         return ipAddress.GetAddressBytes()[0] >= 1 && ipAddress.GetAddressBytes()[0] <= 126;
     }
-
 
     /// <summary>
     /// Checks if the given IP address is a Class B address.
@@ -68,7 +65,6 @@ public static partial class IPAddressExtensions
         return ipAddress.GetAddressBytes()[0] >= 128 && ipAddress.GetAddressBytes()[0] <= 191;
     }
 
-
     /// <summary>
     /// Checks if the given IP address is a Class C address.
     /// </summary>
@@ -80,7 +76,6 @@ public static partial class IPAddressExtensions
         return ipAddress.GetAddressBytes()[0] >= 192 && ipAddress.GetAddressBytes()[0] <= 223;
     }
 
-
     /// <summary>
     /// Checks if the given IP address is a loopback address.
     /// </summary>
@@ -90,7 +85,6 @@ public static partial class IPAddressExtensions
     {
         return IPAddress.IsLoopback(ipAddress);
     }
-
 
     /// <summary>
     /// Checks if the given IP address is a private network address.
@@ -104,7 +98,6 @@ public static partial class IPAddressExtensions
         return bytes[0] == 10 || (bytes[0] == 172 && bytes[1] >= 16 && bytes[1] < 32) || (bytes[0] == 192 && bytes[1] == 168);
     }
 
-
     /// <summary>
     /// Checks if the given IP address is a public network address.
     /// </summary>
@@ -114,7 +107,6 @@ public static partial class IPAddressExtensions
     {
         return !ipAddress.IsLoopback() && !ipAddress.IsPrivateNetwork();
     }
-
 
     /// <summary>
     /// Checks if the given IP address is a multicast address.
@@ -126,7 +118,6 @@ public static partial class IPAddressExtensions
         return ipAddress.AddressFamily == AddressFamily.InterNetwork && ipAddress.GetAddressBytes()[0] >= 224 && ipAddress.GetAddressBytes()[0] <= 239;
     }
 
-
     /// <summary>
     /// Checks if the given IP address is a reserved address.
     /// </summary>
@@ -136,6 +127,4 @@ public static partial class IPAddressExtensions
     {
         return ipAddress.IsPrivateNetwork() || ipAddress.IsLoopback() || ipAddress.IsMulticastAddress() || IPAddress.IsLoopback(ipAddress) || ipAddress.IsIPv6LinkLocal;
     }
-
-
 }

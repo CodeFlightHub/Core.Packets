@@ -33,7 +33,6 @@ public static partial class UriExtensions
         return builder.Uri;
     }
 
-
     /// <summary>
     /// Adds or updates the query parameter with the specified <paramref name="key"/> and <paramref name="value"/> to the URI.
     /// </summary>
@@ -63,7 +62,6 @@ public static partial class UriExtensions
         return uriBuilder.Uri;
     }
 
-
     /// <summary>
     /// Appends the query parameter with the specified <paramref name="key"/> and <paramref name="value"/> to the URI.
     /// If the query parameter with the specified <paramref name="key"/> already exists, updates its value.
@@ -85,5 +83,4 @@ public static partial class UriExtensions
         uriBuilder.Query = query.ToString();
         return new Uri(uriBuilder.ToString());
     }
-
 }

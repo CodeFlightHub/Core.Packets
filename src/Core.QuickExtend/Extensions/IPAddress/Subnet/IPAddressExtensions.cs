@@ -28,7 +28,6 @@ public static partial class IPAddressExtensions
         }
     }
 
-
     /// <summary>
     /// Gets the length of the subnet mask in CIDR notation.
     /// </summary>
@@ -52,7 +51,6 @@ public static partial class IPAddressExtensions
 
         return maskLength;
     }
-
 
     /// <summary>
     /// Checks if the given IP addresses are in the same subnet.
@@ -78,7 +76,6 @@ public static partial class IPAddressExtensions
 
         return true;
     }
-
 
     /// <summary>
     /// Checks if the specified IP address is within the specified subnet.
@@ -118,7 +115,6 @@ public static partial class IPAddressExtensions
         return (addressBytes[mask] & finalByte) == finalByte;
     }
 
-
     /// <summary>
     /// Splits the IP address with a given subnet mask length.
     /// </summary>
@@ -157,6 +153,4 @@ public static partial class IPAddressExtensions
         }
         throw new ArgumentException("IPv4 address expected.");
     }
-
-
 }

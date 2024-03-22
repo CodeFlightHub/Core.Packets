@@ -5,7 +5,6 @@ namespace Core.QuickExtend.Extensions;
 
 public static partial class UriExtensions
 {
-
     /// <summary>
     /// Gets the file extension from the URI's absolute path.
     /// </summary>
@@ -21,7 +20,6 @@ public static partial class UriExtensions
         int lastDotIndex = path.LastIndexOf('.');
         return lastDotIndex != -1 ? path.Substring(lastDotIndex) : string.Empty;
     }
-
 
     /// <summary>
     /// Gets the query parameters from the URI.
@@ -40,7 +38,6 @@ public static partial class UriExtensions
         return parameters.AllKeys.ToDictionary(key => key, key => parameters[key]);
     }
 
-
     /// <summary>
     /// Gets the relative path from the URI.
     /// </summary>
@@ -54,7 +51,6 @@ public static partial class UriExtensions
 
         return uri.IsAbsoluteUri ? uri.PathAndQuery : uri.OriginalString;
     }
-
 
     /// <summary>
     /// Gets the value of a specific query parameter from the URI.
@@ -83,7 +79,6 @@ public static partial class UriExtensions
             return null;
     }
 
-
     /// <summary>
     /// Gets the email address from the URI if it represents a mailto URI.
     /// </summary>
@@ -101,7 +96,6 @@ public static partial class UriExtensions
 
         return uri.AbsoluteUri.Substring("mailto:".Length);
     }
-
 
     /// <summary>
     /// Gets the phone number from the tel URI.
@@ -124,7 +118,6 @@ public static partial class UriExtensions
         return phoneNumber;
     }
 
-
     /// <summary>
     /// Gets the subdomain from the URI's host.
     /// </summary>
@@ -139,7 +132,6 @@ public static partial class UriExtensions
         string[] hostSegments = uri.Host.Split('.');
         return hostSegments.Length > 2 ? hostSegments[0] : string.Empty;
     }
-
 
     /// <summary>
     /// Gets the file name from the URI's absolute path.
@@ -158,7 +150,6 @@ public static partial class UriExtensions
             return path.Substring(index + 1);
         return string.Empty;
     }
-
 
     /// <summary>
     /// Parses the query parameters from the URI and returns them as a JSON string.
@@ -181,5 +172,4 @@ public static partial class UriExtensions
 
         return JsonSerializer.Serialize(dictionary);
     }
-
 }

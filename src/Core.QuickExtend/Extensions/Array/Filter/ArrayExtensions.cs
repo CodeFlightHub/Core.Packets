@@ -19,7 +19,6 @@ public static partial class ArrayExtensions
         return filteredArray;
     }
 
-
     /// <summary>
     /// Filters the elements of an array based on a specified predicate function and sorts the filtered elements using the specified comparison function.
     /// </summary>
@@ -37,7 +36,6 @@ public static partial class ArrayExtensions
         Array.Sort(filteredArray, comparison);
         return filteredArray;
     }
-
 
     /// <summary>
     /// Filters the elements of an array based on a specified predicate function and optionally sorts the filtered elements in ascending or descending order.

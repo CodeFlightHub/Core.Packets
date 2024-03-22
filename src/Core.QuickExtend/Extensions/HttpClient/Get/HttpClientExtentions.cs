@@ -2,7 +2,6 @@
 using System.Net.Http.Json;
 using System.Xml.Serialization;
 
-
 namespace Core.QuickExtend;
 
 public static partial class HttpClientExtensions
@@ -55,7 +54,6 @@ public static partial class HttpClientExtensions
             throw new HttpRequestException($"HTTP request failed: {ex.Message}", ex);
         }
     }
-
 
     /// <summary>
     /// Sends a GET request and deserializes the XML response to the specified type.
@@ -114,7 +112,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a GET request and returns the response content as a byte array.
     /// </summary>
@@ -127,7 +124,6 @@ public static partial class HttpClientExtensions
     {
         return await GetAsByteArrayAsync(client, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a GET request and returns the response content as a byte array.
@@ -163,7 +159,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a GET request and returns the response content as an Image object.
     /// </summary>
@@ -176,7 +171,6 @@ public static partial class HttpClientExtensions
     {
         return await GetAsImageAsync(client, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a GET request and returns the response content as an Image object.
@@ -218,7 +212,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a GET request and returns the response content as a Stream.
     /// </summary>
@@ -231,7 +224,6 @@ public static partial class HttpClientExtensions
     {
         return await GetAsStreamAsync(client, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a GET request and returns the response content as a Stream.
@@ -268,7 +260,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a GET request and returns the response content as a string.
     /// </summary>
@@ -281,7 +272,6 @@ public static partial class HttpClientExtensions
     {
         return await GetAsStringAsync(client, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a GET request and returns the response content as a string.
@@ -317,7 +307,4 @@ public static partial class HttpClientExtensions
             throw new HttpRequestException($"Failed to get string: {ex.Message}", ex);
         }
     }
-
 }
-
-

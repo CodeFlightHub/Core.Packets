@@ -18,7 +18,6 @@ public static partial class HttpClientExtensions
         return await CustomDeleteAsync<TResponse>(httpClient, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
 
-
     /// <summary>
     /// Sends a DELETE request asynchronously and deserializes the response to the specified type.
     /// </summary>
@@ -54,7 +53,6 @@ public static partial class HttpClientExtensions
         }
     }
 
-
     /// <summary>
     /// Sends a DELETE request to the specified URI asynchronously and returns a boolean value indicating whether the request was successful.
     /// </summary>
@@ -71,7 +69,6 @@ public static partial class HttpClientExtensions
     {
         return await CustomDeleteAsync(httpClient, new Uri(requestUri), cancellationToken).ConfigureAwait(false);
     }
-
 
     /// <summary>
     /// Sends a DELETE request to the specified URI asynchronously and returns a boolean value indicating whether the request was successful.
@@ -107,9 +104,4 @@ public static partial class HttpClientExtensions
             return false;
         }
     }
-
-
-
 }
-
-

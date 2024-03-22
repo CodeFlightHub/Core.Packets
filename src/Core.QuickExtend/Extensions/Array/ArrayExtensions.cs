@@ -26,7 +26,6 @@ public static partial class ArrayExtensions
         }
     }
 
-
     /// <summary>
     /// Fills the elements of an array with the specified value.
     /// </summary>
@@ -43,7 +42,6 @@ public static partial class ArrayExtensions
             array[i] = value;
         }
     }
-
 
     /// <summary>
     /// Computes the sum of the elements in an integer array.
@@ -63,7 +61,6 @@ public static partial class ArrayExtensions
         return sum;
     }
 
-
     /// <summary>
     /// Computes the average of the elements in an integer array.
     /// </summary>
@@ -78,7 +75,6 @@ public static partial class ArrayExtensions
         int sum = array.Sum();
         return (double)sum / array.Length;
     }
-
 
     /// <summary>
     /// Resizes the specified array to the specified new size.
@@ -97,7 +93,6 @@ public static partial class ArrayExtensions
         return array;
     }
 
-
     /// <summary>
     /// Determines whether all elements in the array match the conditions defined by the specified predicate.
     /// </summary>
@@ -112,7 +107,6 @@ public static partial class ArrayExtensions
 
         return Array.TrueForAll(array, match);
     }
-
 
     /// <summary>
     /// Partitions the elements of the array into two groups based on a specified predicate function.
@@ -132,7 +126,6 @@ public static partial class ArrayExtensions
 
         return new Tuple<T[], T[]>(trueGroup?.ToArray() ?? new T[0], falseGroup?.ToArray() ?? new T[0]);
     }
-
 
     /// <summary>
     /// Replaces all occurrences of a specified value in the array with a new value.
@@ -155,7 +148,6 @@ public static partial class ArrayExtensions
         }
     }
 
-
     /// <summary>
     /// Sets all elements of the array to the specified value.
     /// </summary>
@@ -172,7 +164,6 @@ public static partial class ArrayExtensions
             array[i] = value;
         }
     }
-
 
     /// <summary>
     /// Returns a new array that is a shallow copy of a portion of the original array between the specified start and end indices.
@@ -195,7 +186,6 @@ public static partial class ArrayExtensions
         return result;
     }
 
-
     /// <summary>
     /// Returns a new array containing only the unique elements from the original array.
     /// </summary>
@@ -207,7 +197,6 @@ public static partial class ArrayExtensions
         HashSet<T> uniqueElements = new HashSet<T>();
         return array.Where(x => uniqueElements.Add(x)).ToArray();
     }
-
 
     /// <summary>
     /// Determines whether the elements in the array are sorted in non-descending order.
@@ -230,6 +219,4 @@ public static partial class ArrayExtensions
         }
         return true;
     }
-
-
 }
