@@ -4,7 +4,6 @@ namespace Core.QuickExtend.Extensions;
 
 public static partial class IPAddressExtensions
 {
-
     /// <summary>
     /// Checks if the given IP address is an IPv4 address.
     /// </summary>
@@ -14,7 +13,6 @@ public static partial class IPAddressExtensions
     {
         return ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork;
     }
-
 
     /// <summary>
     /// Checks if the given string represents a valid IPv4 address.
@@ -27,7 +25,6 @@ public static partial class IPAddressExtensions
         return IPAddress.TryParse(input, out ipAddress) && ipAddress.IsIPv4Address();
     }
 
-
     /// <summary>
     /// Checks if the given IP address is an IPv4-mapped IPv6 address.
     /// </summary>
@@ -37,8 +34,6 @@ public static partial class IPAddressExtensions
     {
         return ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6 && ipAddress.IsIPv4MappedToIPv6;
     }
-
-
 
     /// <summary>
     /// Checks if the given IPv4 address is within the specified range.
@@ -64,10 +59,4 @@ public static partial class IPAddressExtensions
 
         return true;
     }
-
-
 }
-
-
-
-

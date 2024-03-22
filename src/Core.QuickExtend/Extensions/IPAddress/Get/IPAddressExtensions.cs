@@ -39,7 +39,6 @@ public static partial class IPAddressExtensions
         }
     }
 
-
     /// <summary>
     /// Determines the type of the given IP address.
     /// </summary>
@@ -73,8 +72,6 @@ public static partial class IPAddressExtensions
         }
     }
 
-
-
     /// <summary>
     /// Gets the network address of the given IP address.
     /// </summary>
@@ -106,7 +103,6 @@ public static partial class IPAddressExtensions
 
         return new IPAddress(networkBytes);
     }
-
 
     /// <summary>
     /// Gets the broadcast address of the given IP address.
@@ -151,5 +147,29 @@ public static partial class IPAddressExtensions
         return new IPAddress(hostAddressBytes);
     }
 
+    /// <summary>
+    /// Gets the network address of the given IPv6 address.
+    /// </summary>
+    /// <param name="ipAddress">The IPv6 address.</param>
+    /// <param name="subnetMask">The subnet mask.</param>
+    /// <returns>The network address.</returns>
+    public static IPAddress GetIPv6NetworkAddress(this IPAddress ipAddress, IPAddress subnetMask)
+    {
+        if (ipAddress.AddressFamily != System.Net.Sockets.AddressFamily.InterNetworkV6)
+            throw new ArgumentException("IPv6 addresses are only supported.");
 
+        byte[] ipBytes = ipAddress.GetAddressBytes();
+        byte[] maskBytes = subnetMask.GetAddressBytes();
+
+        if (ipBytes.Length != maskBytes.Length)
+            throw new ArgumentException("IP address and subnet mask length mismatch.");
+
+        byte[] networkBytes = new byte[ipBytes.Length];
+        for (int i = 0; i < ipBytes.Length; i++)
+        {
+            networkBytes[i] = (byte)(ipBytes[i] & maskBytes[i]);
+        }
+
+        return new IPAddress(networkBytes);
+    }
 }
