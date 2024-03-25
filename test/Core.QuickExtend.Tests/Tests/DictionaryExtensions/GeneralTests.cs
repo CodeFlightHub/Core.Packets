@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.QuickExtend.Tests.Tests.DictionaryExtentions
+namespace Core.QuickExtend.Tests.Tests.DictionaryExtensions
 {
     internal class GeneralTests
     {

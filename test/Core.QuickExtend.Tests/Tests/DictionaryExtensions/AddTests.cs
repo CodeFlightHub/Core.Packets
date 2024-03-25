@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.QuickExtend.Tests.Tests.DictionaryExtentions
+namespace Core.QuickExtend.Tests.Tests.DictionaryExtensions
 {
     internal class AddTests
     {
@@ -127,7 +127,7 @@ namespace Core.QuickExtend.Tests.Tests.DictionaryExtentions
     };
 
             // Act
-            var keys = DictionaryExtensions.GetKeysByValue(dictionary, "One").ToList(); 
+            var keys = dictionary.GetKeysByValue("One").ToList(); 
 
             // Assert
             Assert.AreEqual(2, keys.Count());
