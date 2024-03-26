@@ -1,4 +1,4 @@
-﻿namespace Core.QuickExtend.Extensions;
+﻿namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class ArrayExtensions
 {
@@ -29,7 +29,13 @@ public static partial class ArrayExtensions
         if (array == null)
             throw new ArgumentNullException(nameof(array));
 
-        List<T> result = [.. array];
+        List<T> result = new List<T>();
+
+        foreach (var item in array)
+        {
+            result.Add(item);
+        }
+
         return result.ToArray();
     }
 }

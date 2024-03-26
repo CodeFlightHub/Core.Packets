@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class IPAddressExtensions
 {

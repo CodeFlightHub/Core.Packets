@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Text;
 
-namespace Core.QuickExtend.Extensions.Dictionary;
+namespace CodeFlightHub.CorePackets.QuickExtend.Dictionary;
 
 public static partial class DictionaryExtensions
 {
