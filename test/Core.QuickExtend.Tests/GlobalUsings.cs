@@ -1,3 +1,3 @@
-global using Core.QuickExtend.Extensions;
+global using CodeFlightHub.CorePackets.QuickExtend;
 global using Moq;
 global using NUnit.Framework;

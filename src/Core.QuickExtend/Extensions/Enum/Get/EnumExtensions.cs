@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class EnumExtensions
 {

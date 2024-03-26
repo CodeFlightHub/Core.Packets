@@ -4,7 +4,7 @@ using System.IO.Compression;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class StreamExtensions
 {

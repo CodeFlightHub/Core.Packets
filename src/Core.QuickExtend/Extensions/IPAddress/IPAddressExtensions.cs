@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 /// <summary>
 /// Extension methods related to IP addresses.

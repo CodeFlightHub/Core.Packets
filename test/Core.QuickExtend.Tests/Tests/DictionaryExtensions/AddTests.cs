@@ -1,4 +1,4 @@
-﻿using Core.QuickExtend.Extensions.Dictionary;
+﻿using CodeFlightHub.CorePackets.QuickExtend.Dictionary;
 using System;
 using System.Collections.Generic;
 using System.Linq;

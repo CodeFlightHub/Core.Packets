@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class ReflectionExtensions
 {

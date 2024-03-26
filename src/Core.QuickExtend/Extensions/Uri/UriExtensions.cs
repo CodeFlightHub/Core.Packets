@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace Core.QuickExtend.Extensions;
+namespace CodeFlightHub.CorePackets.QuickExtend;
 
 public static partial class UriExtensions
 {
