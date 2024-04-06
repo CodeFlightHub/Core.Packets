@@ -1,3 +1,10 @@
+
+<p align="center">
+ <img src="https://github.com/CodeFlightHub/Core.Packets/assets/56757412/9eaea99c-d297-4a25-b9d9-3ddab403b00e" height="256">
+  <h3 align="center">Core Packets
+</h3>
+</p>
+
 <p align="center">
   <a href="https://github.com/CodeFlightHub/Core.Packets/commits/dev"><img src="https://img.shields.io/github/commit-activity/t/CodeFlightHub/Core.Packets?style=for-the-badge"></a>
   <a href="https://github.com/CodeFlightHub/Core.Packets/graphs/contributors"><img src="https://img.shields.io/github/contributors/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
@@ -7,10 +14,7 @@
   <a href="https://github.com/CodeFlightHub/Core.Packets/blob/master/LICENSE"><img src="https://img.shields.io/github/license/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
 </p><br />
 
-# CodeFlightHub CorePackets
-
 In development stage.
-
 
 #  About
 
