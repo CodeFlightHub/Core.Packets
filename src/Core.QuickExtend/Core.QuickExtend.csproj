@@ -1,12 +1,49 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <Version>1.0.1</Version>
+	  <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <AssemblyName>CodeFlightHub.CorePackets.QuickExtend</AssemblyName>
 	  <RootNamespace>CodeFlightHub.CorePackets.QuickExtend</RootNamespace>
+    <Project>CodeFlightHub.CorePackets.QuickExtend</Project>
+	  
   </PropertyGroup>
+
+  <PropertyGroup>
+		<IsPackable>true</IsPackable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageId>CodeFlightHub.CorePackets.QuickExtend</PackageId>
+		<PackageTags>CodeFlightHub; QuickExtend; Extensions;</PackageTags>
+
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Company>CodeFlightHub</Company>
+		<Authors>Serhat Kacmaz, Mustafa Yalcin, Community</Authors>
+		<Description>QuickExtend is a library of extension methods that provide additional functionality to various .Net Core projects.</Description>
+		<PackageIcon>logo.jpeg</PackageIcon>
+		<Copyright>CodeFlightHub</Copyright>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/CodeFlightHub/Core.Packets</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/CodeFlightHub/Core.Packets</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Title>CodeFlightHub.CorePackets.QuickExtend</Title>
+	</PropertyGroup>
+
+	<ItemGroup>
+  	<Content Include="licenses\logo.jpeg" Pack="true" PackagePath="">
+		   <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="8.0.2" />

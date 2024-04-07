@@ -1,42 +1,8 @@
-
-<p align="center">
- <img src="https://github.com/CodeFlightHub/Core.Packets/assets/56757412/9eaea99c-d297-4a25-b9d9-3ddab403b00e" height="256">
-  <h3 align="center">Core Packets
-</h3>
-</p>
-
-<p align="center">
-  <a href="https://github.com/CodeFlightHub/Core.Packets/commits/dev"><img src="https://img.shields.io/github/commit-activity/t/CodeFlightHub/Core.Packets?style=for-the-badge"></a>
-  <a href="https://github.com/CodeFlightHub/Core.Packets/graphs/contributors"><img src="https://img.shields.io/github/contributors/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
-  <a href="https://github.com/CodeFlightHub/Core.Packets/network/members"><img src="https://img.shields.io/github/forks/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
-  <a href="https://github.com/CodeFlightHub/Core.Packets/stargazers"><img src="https://img.shields.io/github/stars/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
-  <a href="https://github.com/CodeFlightHub/Core.Packets/issues"><img src="https://img.shields.io/github/issues/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
-  <a href="https://github.com/CodeFlightHub/Core.Packets/blob/master/LICENSE"><img src="https://img.shields.io/github/license/CodeFlightHub/Core.Packets.svg?style=for-the-badge"></a>
-</p><br />
-
-In development stage.
-
-#  About
-
-This project aims to enrich the open source community by providing core tools and patterns available as NuGet packages. It includes a set of tools and patterns covering recurring needs, common methods and functionalities commonly used in projects in the .NET core ecosystem. It aims to increase productivity by accelerating development processes.
-
-
-# Packages
-
- 
-
-| Package Name | Package | Download |
-| ------------- | ------------- | ------------- |
-| CodeFlightHub.CorePackets.QuickExtend | [![](https://img.shields.io/nuget/v/CodeFlightHub.CorePackets.QuickExtend?style=for-the-badge)](https://www.nuget.org/packages/CodeFlightHub.CorePackets.QuickExtend) | [![](https://img.shields.io/nuget/dt/CodeFlightHub.CorePackets.QuickExtend?style=for-the-badge)](https://www.nuget.org/packages/CodeFlightHub.CorePackets.QuickExtend) |
-| CodeFlightHub.CorePackets.QuickRepository | - | - |
-| CodeFlightHub.CorePackets.QuickCache | - | - |
-
 # About QuickExtend 
 QuickExtend is a library of extension methods that provide additional functionality to various .Net Core projects. This library aims to quickly solve common and recurring needs, usually facilitating the use of HttpClient to manage HTTP requests, from string manipulation to date and time operations, from Reflection operations to collection operations.
-<ul>
-  <li>Total 211 extension method</li>
-  <li>Total 457 unit test</li>
-</ul>
+
+- Total 211 extension method
+- Total 457 unit test
 
 
 | Extension Name | Method Count|
@@ -54,6 +20,7 @@ QuickExtend is a library of extension methods that provide additional functional
 | String | 25 | 
 | Task | 4 | 
 | Uri | 22 | 
+
 
 ### Array
 - `T[] Flatten<T>(this T[][] array)` : Flattens a jagged array (array of arrays) into a one-dimensional array.
