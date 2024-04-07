@@ -23,9 +23,11 @@ This project aims to enrich the open source community by providing core tools an
 
 # Packages
 
+ 
+
 | Package Name | Package | Download |
 | ------------- | ------------- | ------------- |
-| CodeFlightHub.CorePackets.QuickExtend | - | - |
+| CodeFlightHub.CorePackets.QuickExtend | [![](https://img.shields.io/nuget/v/CodeFlightHub.CorePackets.QuickExtend?style=for-the-badge)](https://www.nuget.org/packages/CodeFlightHub.CorePackets.QuickExtend) | [![](https://img.shields.io/nuget/dt/CodeFlightHub.CorePackets.QuickExtend?style=for-the-badge)](https://www.nuget.org/packages/CodeFlightHub.CorePackets.QuickExtend) |
 | CodeFlightHub.CorePackets.QuickRepository | - | - |
 | CodeFlightHub.CorePackets.QuickCache | - | - |
 
